@@ -34,11 +34,11 @@ console.log(trafficColor)
         <Light color={'yellow'} active={trafficColor===2}/>
       </div>
       <div style={{display:'flex',gap:'10px',marginTop:'20px'}}>
-        <button style={{background:'red',color:'#fff',border:'red',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600}} onClick={() => handleButtonClick(0)}>Red Button</button>
-        <button  style={{background:'green',color:'#fff',border:'green',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600}} onClick={() => handleButtonClick(1)}>
+        <button style={{background:'red',color:'#fff',border:'red',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(0)}>Red Button</button>
+        <button  style={{background:'green',color:'#fff',border:'green',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(1)}>
           Green Button
         </button>
-        <button  style={{background:'yellow',color:'#000',border:'yellow',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600}} onClick={() => handleButtonClick(2)}>Yellow Button</button>
+        <button  style={{background:'yellow',color:'#000',border:'yellow',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(2)}>Yellow Button</button>
       </div>
     </div>
   );

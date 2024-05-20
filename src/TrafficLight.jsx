@@ -6,10 +6,10 @@ const duration = [20000, 15000, 5000];
 function TrafficLight({ value }) {
   
   const [trafficColor, setTrafficColor] = useState(value);
-//   const [timeoutId, setTimeoutId] = useState(null);
+
 console.log(trafficColor)
   useEffect(() => {
-    // clearTimeout(timeoutId); 
+ 
     let timer;
     timer = setTimeout(() => {
         setTrafficColor((trafficColor + 1) % 3);
@@ -20,8 +20,7 @@ console.log(trafficColor)
     
   }, [trafficColor]);
 
-  const handleButtonClick = (color) => {
-    // clearTimeout(timeoutId); 
+  const handleClick = (color) => {
     setTrafficColor(color);
   };
 
@@ -34,11 +33,11 @@ console.log(trafficColor)
         <Light color={'yellow'} active={trafficColor===2}/>
       </div>
       <div style={{display:'flex',gap:'10px',marginTop:'20px'}}>
-        <button style={{background:'red',color:'#fff',border:'red',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(0)}>Red Button</button>
-        <button  style={{background:'green',color:'#fff',border:'green',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(1)}>
+        <button style={{background:'red',color:'#fff',border:'red',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleClick(0)}>Red Button</button>
+        <button  style={{background:'green',color:'#fff',border:'green',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleClick(1)}>
           Green Button
         </button>
-        <button  style={{background:'yellow',color:'#000',border:'yellow',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleButtonClick(2)}>Yellow Button</button>
+        <button  style={{background:'yellow',color:'#000',border:'yellow',padding:'20px 40px',borderRadius:'5px',fontSize:'20px',fontWeight:600,cursor:'pointer'}} onClick={() => handleClick(2)}>Yellow Button</button>
       </div>
     </div>
   );
